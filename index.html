@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/proceso.js"></script>
+   
+    <title>Simon dice</title>
+  </head>
+  <body onload="capturar_Pantalla()" onkeypress="capturar_Teclado(event)">
+    <div class="row"> 
+        <div class="key_Demo active">Simón dice</div>
+        <div class="key_Demo active success">Rta correcta</div>
+        <div class="key_Demo active fail">Rta Errada</div>
+    </div>
+    <div class="row"> 
+        <div>
+            <label>NIVEL:</label>
+            <label id="nivel">00</label>
+        </div>
+        <div id="countdown1"></div>
+    </div>      
+    <div class="keyboard" id="keyboard" style="display: none;">     
+      <div class="row">
+        <div class="key" id="81" data-key="81">q</div>
+        <div class="key" id="87" data-key="87">w</div>
+        <div class="key" id="69" data-key="69">e</div>
+        <div class="key" id="82" data-key="82">r</div>
+        <div class="key" id="84" data-key="84">t</div>
+        <div class="key" id="89" data-key="89">y</div>
+        <div class="key" id="85" data-key="85">u</div>
+        <div class="key" id="73" data-key="73">i</div>
+        <div class="key" id="79" data-key="79">o</div>
+        <div class="key" id="80" data-key="80">p</div>
+      </div>
+      <div class="row">
+        <div class="key" id="65" data-key="65">a</div>
+        <div class="key" id="83" data-key="83">s</div>
+        <div class="key" id="68" data-key="68">d</div>
+        <div class="key" id="70" data-key="70">f</div>
+        <div class="key" id="71" data-key="71">g</div>
+        <div class="key" id="72" data-key="72">h</div>
+        <div class="key" id="74" data-key="74">j</div>
+        <div class="key" id="75" data-key="75">k</div>
+        <div class="key" id="76" data-key="76">l</div>
+      </div> 
+      <div class="row last">
+        <div class="key" id="90" data-key="90">z</div>
+        <div class="key" id="88" data-key="88">x</div>
+        <div class="key" id="67" data-key="67">c</div>
+        <div class="key" id="86" data-key="86">v</div>
+        <div class="key" id="66" data-key="66">b</div>
+        <div class="key" id="78" data-key="78">n</div>
+        <div class="key" id="77" data-key="77">m</div>
+      </div>
+    </div>
+    <div> 
+      <div id="comenzar" class="comenzar_Btn" onclick="iniciar()"> 
+        <span>¡COMENCEMOS!</span>
+      </div>
+      <div id="continuar" class="comenzar_Btn" onclick="generar_Letra()" style="display: none;"> 
+        <span>¡CONTINUAR!</span>
+      </div>
+      <div id="reiniciar" class="comenzar_Btn" onclick="reiniciar()" style="display: none;"> 
+        <span>¡EMPEZAR DE NUEVO!</span>
+      </div>
+      <div id="div_Datos"> 
+
+      </div>
+    </div>
+    
+  </body>
+</html>
