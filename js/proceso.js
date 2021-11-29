@@ -67,7 +67,7 @@ function validar_Respuesta(rta){
 			seleccion.classList.add("active", "success");
 			aumentar_Puntaje();
 			var puntaje = localStorage.getItem('puntaje');
-			if (puntaje==400) {
+			if (puntaje==1000) {
 				localStorage.setItem('estado',2);
 				setTimeout(function() { alert('¡FELICITACIONES! Has superado todos los niveles. registra tu puntaje.'); }, 500);
 				mostrar_Registrar();
