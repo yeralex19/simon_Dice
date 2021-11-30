@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="js/proceso.js"></script>
-   
+    <link href="css/sweetalert.css" rel="stylesheet">
+
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/procesov2.js"></script>
+      
     <title>Simon dice</title>
   </head>
-  <body onload="capturar_Pantalla()" onkeypress="capturar_Teclado(event)">
+  <!--<body onload="capturar_Pantalla()" onkeypress="capturar_Teclado(event)">-->
+  <body> 
     <div class="row"> 
         <div class="key_Demo active">Simón dice</div>
         <div class="key_Demo active success">Rta correcta</div>
         <div class="key_Demo active fail">Rta Errada</div>
-    </div>
-    <div class="row"> 
-        <div>
-            <label>NIVEL:</label>
-            <label id="nivel">00</label>
-        </div>
-        <div id="countdown1"></div>
-    </div>      
+    </div>   
     <div class="keyboard" id="keyboard" style="display: none;">     
       <div class="row">
         <div class="key" id="81" data-key="81">q</div>
@@ -57,7 +54,7 @@
       </div>
     </div>
     <div> 
-      <div id="comenzar" class="comenzar_Btn" onclick="iniciar()"> 
+      <div id="comenzar" class="comenzar_Btn" onclick="siguienteNivel(1)"> 
         <span>¡COMENCEMOS!</span>
       </div>
       <div id="div_Datos"> 
